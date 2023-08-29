@@ -14,6 +14,8 @@ variable "workload_identity_providers" {
     attribute_mapping = map(string)
     attribute_condition = string
     oidc_issuer_uri = string
+    allowed_audiences = optional(set(string))
+
   }))
 }
 
