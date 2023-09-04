@@ -13,6 +13,7 @@ resource "google_iam_workload_identity_pool_provider" "this" {
   attribute_condition                = each.value.attribute_condition
   oidc {
     issuer_uri = each.value.oidc_issuer_uri
+    allowed_audiences = each.value.allowed_audiences
   }
 }
 
